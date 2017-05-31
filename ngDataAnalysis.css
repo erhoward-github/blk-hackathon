@@ -1,0 +1,64 @@
+form.tab-form-demo .tab-pane 
+{
+    margin: 20px 20px;
+}
+.grid 
+{
+width: 100%;
+height: 250px;
+margin:8px auto;
+}
+.btn-bar
+{
+padding:8px 0 0 0;
+}
+.ai-header{
+	/*
+    background-image: url("https://webster.bfm.com/aladdinview/images/Aladdin_Interface_Background_05.png");
+    */
+    background-image: url("../../images/Aladdin_Interface_Background_05.png");
+    background-color: #008ccf;
+    background-position:center;
+    background-repeat:no-repeat;
+    font-size: 11px;
+    overflow:hidden;
+    width:100%;
+    color: #FFFFFF;
+    min-width: 480px;
+    height: 42px;
+    z-index: 10;
+}
+.ai-header .ai-header-title {
+    float:left;
+    font-family: "Arial", Tahoma, Arial, sans-serif;
+    font-size: 2em;
+    margin: 10px 0px 0px 10px;
+    line-height: 17px;
+}
+.ai-header .ai-header-controls{
+    margin: 0px;
+    text-align: right;
+    float: right;
+}
+.ai-header .ai-header-logo{
+    background-repeat:no-repeat;
+    background-position: right;
+    text-align:left;
+    width:250px;
+    float:right;
+    /*
+    background-image: url("https://webster.bfm.com/aladdinview/images/Aladdin_Logo_H_ko_2.png");
+    */
+    background-image: url("../../images/Aladdin_Logo_H_ko_2.png");
+    height:17px;
+    margin:10px 15px 0px 0px;
+}
+.ai-header-options{
+    margin-right:150px;
+    display:inline;
+}
+
+.panel-body ul
+{
+display:none;
+}

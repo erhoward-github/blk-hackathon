@@ -1,0 +1,107 @@
+<div class="modal-header">
+    <h3 class="modal-title">Match Rules</h3>
+</div>
+
+<div class="modal-body">
+
+<div class="row">
+
+	<div class="col-md-6">
+
+    <div class="panel-default">
+    <div class="panel-heading">Columns</div>
+    <div class="panel-body">
+
+		<!-- ********************************************************************************** -->
+		<!-- ********************************************************************************** -->
+		<select ng-model="column" size="16" data-ng-change="applyColumn(this)" style="width:100%;height:272px;"> 
+			<optgroup ng-repeat="dateHeaderCol in dataHeaderCols" label="{{dateHeaderCol.firstValue}}">
+				<option ng-repeat="(key, value) in dateHeaderCol.secondValue.internalToOrgColMap" value="{{dateHeaderCol.firstValue}}.{{key}}">{{value}}
+				</option>
+			</optgroup>
+		</select>
+		<!-- ********************************************************************************** -->
+		<!-- ********************************************************************************** -->
+
+    </div>
+    </div>
+
+	</div>
+
+	<div class="col-md-6">
+    <div class="panel-default">
+    <div class="panel-heading">Operators</div>
+    <div class="panel-body">
+
+		<select data-ng-model="operator" data-ng-change="applyOperator(this)" 
+				size="16" style="width:100%;height:272px;">
+			<option value="=">equal to (=)</option>
+			<option value="!=">not equal to (!=)</option>
+			<option value="<">less than (<)</option>
+			<option value="<=">less than or equal to (<=)</option>
+			<option value=">">greater than (>)</option>
+			<option value=">=">greater than or equal to (>=)</option>
+			<option value="~">does match - case sensitive (~)</option>
+			<option value="~~">does match (~~)</option>
+			<option value="!~">does not match - case sensitive (!~)</option>
+			<option value="!~~">does not match (!~~)</option>
+			<option value="?">includes (?)</option>
+			<option value="!?">excludes (!?)</option>
+			<option value="!">not (!)</option>
+			<option value="&&">and (&)</option>
+			<option value="||">or (|)</option>
+		</select>
+
+    </div>
+    </div>
+	</div>
+
+</div>
+<div class="row">
+
+	<div class="col-md-12">
+    <div class="panel-default">
+    <div class="panel-heading">Rules Editor</div>
+    <div class="panel-body">
+
+        <textarea id="matchCriteria" 
+			data-ng-model="ruleExpression" 
+			rows="8" 
+			cols="96" 
+			placeholder="Enter rule expression. . ."
+			style="width:100%">
+		</textarea>
+
+	</div>
+	</div>
+	</div>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <label for="ruleName">Rule Name</label>
+        <input type="search" id="ruleName" data-ng-model="ruleName" placeholder="Enter rule name. . .">
+    </div>
+    <div class="col-md-4">
+        <label for="matched">Matched</label>
+        <select id="matched" data-ng-model="ruleDecision">
+            <option value="Y">Yes</option>
+            <option value="N">No</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="ruleType">Rule Type</label>
+        <select id="ruleType" data-ng-model="ruleType">
+            <option value="Matching">Matching</option>
+            <option value="Not Matching">Not Matching</option>
+        </select>
+    </div>
+</div>
+
+
+</div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary btn-xs" type="button" ng-click="ok()">OK</button>
+    <button class="btn btn-primary btn-xs" type="button" ng-click="cancel()">Cancel</button>
+</div>

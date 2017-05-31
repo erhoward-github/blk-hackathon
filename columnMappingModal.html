@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h3 class="modal-title">Column Mapping</h3>
+</div>
+<div class="modal-body">
+	<div>
+    	<label for="columnMapping">Column Mapping</label>
+    	<textarea id="columnMapping" 
+			data-ng-model="columnMapping" 
+			rows="8" 
+			cols="96" 
+			placeholder="Enter column mapping. . .">
+		</textarea>
+	</div>
+<!--
+<p>{{columnMapping}}</p>
+-->
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary btn-xs" type="button" ng-click="ok(columnMapping)">OK</button>
+    <button class="btn btn-primary btn-xs" type="button" ng-click="cancel()">Cancel</button>
+</div>
